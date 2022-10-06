@@ -1,5 +1,5 @@
 # Password Guesser class
-
+from PersonalInfo import PersonalInfo
 import random
 import string
 

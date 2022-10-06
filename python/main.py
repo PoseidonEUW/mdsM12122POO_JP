@@ -5,15 +5,17 @@ import os
 import time
 import random
 import string
-
 from PasswordGuesser import PasswordGuesser
+from PersonalInfo import PersonalInfo
 
 def main():
     # Get the password from the command line
-    if len(sys.argv) != 2:
-        print("Usage: python3 main.py <password>")
-        sys.exit(1)
-    password = sys.argv[1]
+    name = input("Enter your name")
+    date = input("Enter your date of birth")
+    user_password = input("Enter your password")
+    person = PersonalInfo(name,date,user_password)
+    # Create a PasswordGuesser object
+    password = user_password
     guesser = PasswordGuesser(password)
 
     while True:
