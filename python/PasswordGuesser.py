@@ -10,7 +10,7 @@ class PasswordGuesser:
 
     def guess(self):
         self.guesses += 1
-        return ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(len(self.password)))
+        return ''.join(random.choice(string.ascii_letters) for _ in range(len(self.password)))
 
     def get_guesses(self):
         return self.guesses
